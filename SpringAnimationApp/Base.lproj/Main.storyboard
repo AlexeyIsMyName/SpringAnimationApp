@@ -21,8 +21,8 @@
                                 <rect key="frame" x="80" y="104" width="254" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Core Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVr-sf-KR4">
-                                        <rect key="frame" x="68.5" y="49.5" width="117" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="47.5" y="45.5" width="159.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -56,16 +56,75 @@
                                     <action selector="runCoreAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2Q-Sy-0Ub"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxl-LA-ff7" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="80" y="284" width="254" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbH-Pv-Rnb">
+                                        <rect key="frame" x="38.5" y="45.5" width="177.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstItem="VbH-Pv-Rnb" firstAttribute="centerX" secondItem="oxl-LA-ff7" secondAttribute="centerX" id="4XW-Ya-GM9"/>
+                                    <constraint firstItem="VbH-Pv-Rnb" firstAttribute="centerY" secondItem="oxl-LA-ff7" secondAttribute="centerY" id="8jr-xY-iE4"/>
+                                    <constraint firstAttribute="height" constant="120" id="cET-Pe-RYd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="shake"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeIn"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yr-SC-Zh4" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="80" y="803.5" width="254" height="36"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Run String Animation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="oxl-LA-ff7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="1Fo-QF-uFp"/>
+                            <constraint firstItem="oxl-LA-ff7" firstAttribute="top" secondItem="Pqv-S7-iaf" secondAttribute="bottom" constant="60" id="Ads-25-3ep"/>
                             <constraint firstItem="Pqv-S7-iaf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="PrN-Ct-T2s"/>
                             <constraint firstItem="Pqv-S7-iaf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Y0i-ht-R2w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oxl-LA-ff7" secondAttribute="trailing" constant="80" id="bu9-oP-htf"/>
+                            <constraint firstItem="0Yr-SC-Zh4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dYx-sw-J2r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pqv-S7-iaf" secondAttribute="trailing" constant="80" id="eJ2-9u-DQh"/>
+                            <constraint firstItem="0Yr-SC-Zh4" firstAttribute="top" secondItem="UDo-5m-1ju" secondAttribute="bottom" constant="20" id="eaX-qT-qZo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UDo-5m-1ju" secondAttribute="bottom" multiplier="1.1" id="fvZ-5Q-YVd"/>
                             <constraint firstItem="UDo-5m-1ju" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iuh-gQ-gjz"/>
                             <constraint firstItem="UDo-5m-1ju" firstAttribute="width" secondItem="Pqv-S7-iaf" secondAttribute="width" id="nol-hn-YQ6"/>
+                            <constraint firstItem="0Yr-SC-Zh4" firstAttribute="width" secondItem="oxl-LA-ff7" secondAttribute="width" id="yyk-vV-dYn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -74,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="117"/>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
@@ -86,6 +145,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
