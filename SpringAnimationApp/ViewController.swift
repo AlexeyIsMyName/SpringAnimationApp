@@ -5,11 +5,12 @@
 //  Created by ALEKSEY SUSLOV on 11.08.2022.
 //
 
-import UIKit
+import Spring
 
 class ViewController: UIViewController {
 
     @IBOutlet var coreAnimationView: UIView!
+    @IBOutlet var springAnimationView: SpringView!
     
     private var originCoordinate: CGFloat?
     
@@ -28,6 +29,17 @@ class ViewController: UIViewController {
                 self.coreAnimationView.frame.origin.x -= 40
             }
         }
+    }
+    
+    @IBAction func runSpringAnimation(_ sender: SpringButton) {
+        springAnimationView.animation = "squeeze"
+        springAnimationView.curve = "easeIn"
+        springAnimationView.force = 1
+        springAnimationView.duration = 1
+        springAnimationView.animate()
+        
+        sender.animation = "wobble"
+        sender.animate()
     }
     
 }
